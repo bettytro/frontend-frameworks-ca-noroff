@@ -5,18 +5,11 @@ import { Helmet } from "react-helmet";
 
 const CheckoutSuccess = () => {
     const { clearCart } = useContext(CartContext);
-    function createRandomNumber() {
-        return Math.floor(Math.random() * 1000)
-    }
 
     useEffect(() => {
-        let ignore = false;
+        clearCart();
+    }, []);
 
-        if (!ignore) clearCart()
-        return () => {
-            ignore = true;
-        }
-    })
     return (
         <main className='min-h-[70vh] flex items-center bg-slate-950 px-8'>
             <Helmet>
@@ -28,7 +21,7 @@ const CheckoutSuccess = () => {
             </Helmet>
             <section className='max-w-[1600px] flex flex-col text-center mx-auto text-white'>
                 <h1 className='text-6xl font-black py-8'>Thank you for ordering!</h1>
-                <p>Your order <span>#{createRandomNumber()}</span> is now in processing, and will be sent to you as soon as possible.</p>
+                <p>Your order is now in processing, and will be sent to you as soon as possible.</p>
                 <Link to='/' className='bg-white text-slate-950 p-4 rounded-md font-semibold border-2 border-white transition-all duration-300 ease-in-out hover:bg-slate-950 hover:text-white mt-8'>Shop more</Link>
             </section>
         </main>
