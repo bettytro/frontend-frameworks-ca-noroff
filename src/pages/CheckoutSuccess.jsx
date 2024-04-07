@@ -16,7 +16,7 @@ const CheckoutSuccess = () => {
         return () => {
             ignore = true;
         }
-    }, [])
+    })
     return (
         <main className='min-h-[70vh] flex items-center bg-slate-950 px-8'>
             <Helmet>
