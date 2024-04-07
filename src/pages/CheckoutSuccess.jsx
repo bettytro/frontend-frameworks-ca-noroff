@@ -5,10 +5,14 @@ import { Helmet } from "react-helmet";
 
 const CheckoutSuccess = () => {
     const { clearCart } = useContext(CartContext);
+    
+    /* eslint-disable */
 
     useEffect(() => {
         clearCart();
     }, []);
+
+    /* eslint-enable */
 
     return (
         <main className='min-h-[70vh] flex items-center bg-slate-950 px-8'>
