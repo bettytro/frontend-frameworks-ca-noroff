@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/cartContext';
 import { Helmet } from "react-helmet";
-import { clear } from '@testing-library/user-event/dist/clear';
 
 const CheckoutSuccess = () => {
     const { clearCart } = useContext(CartContext);
